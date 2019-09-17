@@ -70,5 +70,12 @@ longFunctionErlang = fn x -> length(x) end
 IO.puts 'Länge long function: #{longFunctionErlang.([1,2,3,4,5])}'
 
 IO.puts ''
-IO.puts '------- Short functions --------'
+IO.puts '------- Exercise 5 --------'
 IO.puts ''
+
+# Enum.map [1,2,3,4], fn x -> x + 2 end
+
+IO.puts 'Enum.map [1,2,3,4], fn x -> x + 2 end'
+IO.inspect (Enum.map [1,2,3,4], &(&1 + 2))
+IO.puts 'Enum.each [1,2,3,4], fn x -> IO.inspect x end'
+Enum.each [1,2,3,4], &{IO.inspect(&1)}
