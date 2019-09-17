@@ -39,12 +39,12 @@ defmodule Greeter do
   end
 end
 
-mr_valim = Greeter.for("Flo", "Moin")
-mrs_valim = Greeter.for("Mina", "Hallo")
-IO.puts mr_valim.("Flo")
-IO.puts mr_valim.("Janina")
-IO.puts mrs_valim.("Mina")
-IO.puts mrs_valim.("Jessica")
+mr_valim = Greeter.for("Foo", "Moin")
+mrs_valim = Greeter.for("Bar", "Hallo")
+IO.puts mr_valim.("Foo")
+IO.puts mr_valim.("Bar")
+IO.puts mrs_valim.("FooBar")
+IO.puts mrs_valim.("BarFoo")
 
 IO.puts ''
 IO.puts '------- Short functions --------'
