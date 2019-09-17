@@ -61,7 +61,7 @@ divRemShortFunction.(13,5)
 
 IO.puts ''
 greetingShortFunction = &{IO.puts('Moin hier ist #{&1}')}
-greetingShortFunction.('Flo')
+greetingShortFunction.('Foo')
 
 shortFunctionErlang = &length/1
 IO.puts 'Länge short function: #{shortFunctionErlang.([1,2,3,4,5,6,7,8,9,10])}'
