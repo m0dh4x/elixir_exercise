@@ -42,5 +42,18 @@ defmodule DefaultParams do
 end
 
 defmodule ChopExcercise do
-  
+  def guess(input, min..max) do (
+    middle = div(min+max, 2)
+    IO.puts "Is it #{middle}?"
+    compare input, min..max, middle
+  )
+  end
+  defp compare(input, _.._, input), do: IO.puts "Yes it`s #{input}"
+
+  defp compare(input, min.._, current) when input < current do
+    guess input, min..current
+  end
+  defp compare(input, _..max, current) when input >= current do
+    guess input, current..max
+  end
 end
