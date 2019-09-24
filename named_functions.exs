@@ -60,8 +60,5 @@ end
 
 defmodule AttributesExample do
   @author "Florian Drews"
-  def get_author(), do: @author
+  def get_author(), do: IO.puts "Examples written by #{@author}"
 end
-
-IO.puts "Examples written by #{AttributesExample.get_author}"
-IO.puts ""
