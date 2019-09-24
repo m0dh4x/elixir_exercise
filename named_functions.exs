@@ -57,3 +57,11 @@ defmodule ChopExcercise do
     guess input, current..max
   end
 end
+
+defmodule AttributesExample do
+  @author "Florian Drews"
+  def get_author(), do: @author
+end
+
+IO.puts "Examples written by #{AttributesExample.get_author}"
+IO.puts ""
