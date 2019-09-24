@@ -3,6 +3,9 @@ defmodule Times do
     n * 2
   end
   def doubleShort(n), do: n * 2
+  def tribble(n), do: n * 3
+  def quadruple(n), do: double(n) + double(n)
+  def quadrupleOther(n), do: n |> double() |> double()
 end
 
 defmodule Greetings do
