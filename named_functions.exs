@@ -36,3 +36,7 @@ defmodule GreatestCommonDivisor do
   def gcd(x,0), do: x
   def gcd(x,y), do: gcd(y, rem(x,y))
 end
+
+defmodule DefaultParams do
+  def defaultParamsFunc(a, b \\ 2, c \\ 3, d), do: IO.inspect [a, b, c, d]
+end
