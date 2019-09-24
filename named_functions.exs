@@ -40,3 +40,7 @@ end
 defmodule DefaultParams do
   def defaultParamsFunc(a, b \\ 2, c \\ 3, d), do: IO.inspect [a, b, c, d]
 end
+
+defmodule ChopExcercise do
+  
+end
