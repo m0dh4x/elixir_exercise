@@ -12,3 +12,10 @@ defmodule MyListWithFunc do
   def map([], _func), do: []
   def map([head|tail], func), do: [ func.(head) | map(tail, func) ]
 end
+
+defmodule MyReducer do
+  def reduce([], startValue, _), do: startValue
+  def reduce([head | tail], startValue, func) do 
+    reduce(tail, func.(head, startValue), func)
+  end
+end
