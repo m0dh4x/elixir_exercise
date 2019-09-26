@@ -19,3 +19,26 @@ defmodule MyReducer do
     reduce(tail, func.(head, startValue), func)
   end
 end
+
+defmodule MapSumExcercise do
+  def mapsum([] ,_), do: 0
+  def mapsum([head | tail], func) do
+    func.(head) + mapsum(tail, func)
+  end
+end
+
+defmodule MaxNumberExcercise do
+  def highest([]), do: -1
+  def highest([x]), do: x
+  def highest([head | tail]) do
+    compare(head, highest(tail))
+  end
+
+  defp compare(val, currentHighest) when val < currentHighest do
+    currentHighest
+  end
+
+  defp compare(val, currentHighest) when val > currentHighest do
+    val
+  end
+end
