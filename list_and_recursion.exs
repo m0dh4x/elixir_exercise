@@ -42,3 +42,13 @@ defmodule MaxNumberExcercise do
     val
   end
 end
+
+defmodule CaesarExcercise do
+  def caesar('', _key), do: ''
+  def caesar([head | tail], key) when head + key <= ?z do
+    [head + key | caesar(tail, key)]
+  end
+  def caesar([head | tail], key) do
+    [head + key - 26 | caesar(tail, key)]
+  end
+end
