@@ -52,3 +52,8 @@ defmodule CaesarExcercise do
     [head + key - 26 | caesar(tail, key)]
   end
 end
+
+defmodule MyListSpan do
+  def span(from, to) when from > to, do: []
+  def span(from, to), do: [from | span(from+1, to)]  
+end
