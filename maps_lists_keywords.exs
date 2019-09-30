@@ -24,3 +24,12 @@ defmodule InspectMaps do
   end
 end
 
+defmodule PatternMatchingWithVariableKey do
+  def matching(foo) when foo == %{}, do: %{}
+  def matching(data = %{name: _name, state: _state, likes: _likes}) do
+    for key <- [ :name, :likes ] do
+      %{ ^key => value } = data
+      value
+    end
+  end
+end
